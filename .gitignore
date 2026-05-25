@@ -1,0 +1,19 @@
+# Android
+.gradle
+local.properties
+.cxx
+
+# Generated
+*.apk
+*.ap_
+*.aab
+
+# IDE
+.idea
+*.iml
+.DS_Store
+
+# Build
+build/
+captures/
+output.json
