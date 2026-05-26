@@ -167,11 +167,16 @@ fun AddTaskScreen(navController: NavController) {
                 TextButton(onClick = { navController.popBackStack() }) { Text("Cancel") }
                 Spacer(Modifier.width(8.dp))
                 Button(
+                    enabled = state.selectedPriority != null,
                     onClick = {
-                        viewModel.addTask(title, description, state.selectedPriority!!, state.selectedCategory)
+                        viewModel.addTask(
+                            title,
+                            description,
+                            state.selectedPriority!!,
+                            state.selectedCategory
+                        )
                         navController.popBackStack()
-                    },
-                    enabled = title.isNotBlank() && !state.isSaving
+                    }
                 ) {
                     if (state.isSaving) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp, color = MaterialTheme.colorScheme.onPrimary)
                     else Text("Save task")
