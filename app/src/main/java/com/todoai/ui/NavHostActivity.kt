@@ -1,7 +1,5 @@
 package com.todoai.ui
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.BarChart
@@ -32,7 +30,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 
-@RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
 fun NavHostActivity() {
     val navController = rememberNavController()
